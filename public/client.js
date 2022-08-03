@@ -47,9 +47,17 @@ function myFunction() {
   element.classList.toggle("dark-mode");
 }
 let sum = 0;
-function roll() {
+function roller(){
   const dice = Number(Math.floor(Math.random() * (6 - 1 + 1)) + 1);
   document.getElementById("dice").innerHTML = dice;
+  
+  socket.emit("roll",dice)
+}
+socket.on("roll",(dice)=>{
+  roll(dice);
+})
+function roll(dice) {
+  
   sum = sum + dice;
   if(sum>100){
     sum = sum-dice;
