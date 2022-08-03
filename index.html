@@ -11,9 +11,11 @@
 <body>
   <!--<button onclick="myFunction()">Dark Mode</button>-->
   <button onclick="roll()">roll a dice</button>
-  <p id="dice"></p>
-  <p>current_position : <span id="current_position"></span></p>
+  <p id="dice"style="font: weight 200px;"></p>
+  <p>current_position : <span id="current_position" style="display: inline-block;"></span></p>
+  <div id ="piece" style="opacity: 1px;"></div>
   <div class="snakeladder">
+    <canvas style="overflow: hidden;" id="mycanvas"></canvas>
     <!--1-->
     <div class="grid-item">100</div>
     <div class="grid-item">99</div>
@@ -125,8 +127,9 @@
     <div class="grid-item">8</div>
     <div class="grid-item">9</div>
     <div class="grid-item">10</div>
-
+  
   </div>
+
   <section class="chat__section">
     <div class="brand">
       <img src="/ayz.jpg">
